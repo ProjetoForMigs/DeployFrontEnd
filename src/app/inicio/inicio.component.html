@@ -1,0 +1,272 @@
+<div class="container-fluid bgPgPerfil">
+
+  <!-- Ponto pra dar margem em cima  -->
+  <p class="ponto">.</p>
+
+  <!-- Inicio do container para as colunas  -->
+  <div class="container-fluid bgPgPerfil">
+    <div class="col-md-12">
+      <div class="row d-flex justify-content-between md-auto">
+
+        <!-- PRIMEIRA COLUNA  -->
+        <div class="col-md-3 d-flex flex-column mt-3">
+
+          <div class="col-md-12">
+            <div class="card py-3">
+              <div class="d-flex flex-column align-items-center text-center md-auto">
+
+                <img src="{{foto}}" alt="Admin" class="rounded-circle" width="50%">
+
+                <div class="mt-3">
+                  <h5 class="text-dark textNome">{{nome}}</h5>
+                  <p class="text-black-50 textTipo">{{tipo}}</p>
+
+                  <hr>
+                  <h6 class="mb-0 text-dark">Bio</h6>
+                  <!-- <span>{{usuario.bio}}</span> -->
+                </div>
+                <div class="col-sm-12 text-secondary mb-3">
+                  <p class="textoBio">{{usuario.bio}}</p>
+
+                  <button class="btn botaoEditar" type="submit">Editar Perfil</button>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD DE CONTATO  -->
+            <div class="card mt-3">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex justify-content-between align-items-center flex-column">
+                  <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                      fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                      class="feather feather-globe mr-2 icon-inline">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="2" y1="12" x2="22" y2="12"></line>
+                      <path
+                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                      </path>
+                    </svg>Site</h6>
+                  <span class="textContat mr-2 ml-2">github.com/ProjetoForMigs</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center flex-column">
+                  <i class="fa fa-linkedin-square" aria-hidden="true"><b> LinkedIn</b></i>
+                  <span class="textContat">https://www.linkedin.com/in/macena-kelvin/</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center flex-column">
+                  <i class="fa fa-envelope-o" aria-hidden="true"><b> E-mail</b></i>
+                  <span class="textContat">{{usuarioUsuario}}</span>
+                </li>
+              </ul>
+            </div>
+            <!-- CARD DE CONTATO -->
+          </div>
+        </div>
+        <!-- PRIMEIRA COLUNA  -->
+        <!-- SEGUNDA COLUNA / INICIO CRIAR POSTAGEM -->
+        <div class="col-md-6 d-flex flex-column mt-3">
+          <div class="col-md-12">
+
+            <div class="card py-3">
+              <div class="d-flex align-items-center text-center md-auto">
+                <img src="{{foto}}" alt="Admin" class="rounded-circle ml-3" width="10%">
+                <button type="button" class="btnModal text-secondary ml-3 rounded text-center" data-toggle="modal"
+                  data-target="#novaPostagem">Criar Postagem</button>
+              </div>
+            </div>
+            <!-- FIM CRIAR POSTAGEM -->
+            <!-- Inicio Geral Postagens -->
+            <!-- INICIO BOTÕES POSTAGENS  -->
+            <hr>
+            <div class="d-flex justify-content-around text-center md-auto align-items-center">
+              <ul class="nav" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link active btnAll" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+                    aria-controls="pills-home" aria-selected="true">Todos os Posts</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a (click)="findByIdUsuario()" class="nav-link btnPost ml-2 mr-2" id="pills-profile-tab"
+                    data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile"
+                    aria-selected="false">Meus Posts</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link btnPost" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
+                    aria-controls="pills-contact" aria-selected="false">Posts por Tema</a>
+                </li>
+              </ul>
+            </div>
+
+
+            <div class="tab-content text-color" id="pills-tabContent">
+              <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                <div class="tab-pane fade show active" id="pills-todasPostagens" role="tabpanel"
+                  aria-labelledby="pills-todasPostagens-tab">
+
+                  <div class="text-center w-90" *ngFor='let item of listaPostagens'>
+                    <div class="card mt-3 py-3">
+                      <div class="d-flex align-items-center text-center md-auto">
+                        <div class="body">
+
+                          <div class="d-flex flex-row bd-highlight mb-3 d-flex align-items-center">
+                            <img class="rounded-circle p-2 ml-3 bd-highlight" src="{{item.usuario.foto}}"
+                              alt="Imagem do Usuário" width="10%" height="10%" class="rounded-circle ml-2">
+
+                            <p class="text-dark postagemNome mr-2 ml-2">{{item.usuario.nome}} </p>
+                            <p class="text-dark postagemTipo"> - {{tipo}}</p>
+
+                          </div>
+                          <h5 class="card-title m-0">{{item.titulo}}</h5>
+                          <small class="text-muted"> Tema: {{item.tema.descricao}}</small>
+                          <p class="card-text mt-3 postagemTexto ml-2 mr-2">{{item.texto}}.</p>
+                          <p class="card-text postagemTexto"><small class="text-muted postagemTexto">{{item.date | date:
+                              'dd/MM/yyyy'}} às {{item.date
+                              | date: 'HH:mm'}}</small></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Minhas postagens -->
+              <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <div class="text-center" *ngFor='let post of usuario.postagem'>
+                  <div class="card mt-3 py-3">
+                    <div class="d-flex align-items-center text-center md-auto">
+                      <div class="card-body">
+                        <h5 class="card-title m-0">{{post.titulo}}</h5>
+                        <small class="text-muted">Tema: {{post.tema.descricao}}</small>
+                        <p class=" postagemTexto postagemTexto ml-3 mr-3">{{post.texto}}</p>
+                        <p class="card-text"><small class="text-muted">{{post.date | date: 'dd/MM/yyy'}} às {{post.date
+                            |date: 'HH:mm'}}</small></p>
+                            <button class="btn btnColor mr-3" [routerLink]="['/postagem-edit', post.id]">Editar</button>
+                            <button class="btn btnColor1" [routerLink]="['/postagem-delete', post.id]">Apagar</button>    
+
+                        <!-- <a [routerLink]="['/postagem-edit', post.id]" class="mr-3 btnEditar" href="">Editar</a>
+                        <a [routerLink]="['/postagem-delete', post.id]" class="btnApagar" href="">Apagar</a> -->
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Fim Minhas postagens -->
+
+              <!-- Postagens por tema -->
+              <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                <div *ngFor='let tema of listaTemas'>
+                  <div class="text-center" *ngFor='let post of tema.postagem'>
+                    <div class="card mt-3 py-3">
+                      <div class="d-flex align-items-center text-center md-auto">
+                        <div class="card-body">
+                          <h5 class="card-title m-0">{{post.titulo}}</h5>
+                          <small class="text-muted">Tema: {{tema.descricao}}</small>
+                          <p class="card-text mt-3  postagemTexto">{{post.texto}}</p>
+                          <p class="card-text"><small class="text-muted">{{post.date | date: 'dd/MM/yyy'}} às
+                              {{post.date
+                              | date: 'HH:mm'}}</small></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- fim Postagens por tema -->
+
+            </div>
+            <!-- Fim Geral Postagens -->
+          </div>
+        </div>
+        <!-- SEGUNDA COLUNA  -->
+
+        <!-- TERCEIRA COLUNA  -->
+        <div class="col-md-3 d-flex mt-3">
+          <div class="col-md-12">
+
+            <div class="card py-3 d-flex align-items-center text-center">
+              <img src="https://imgur.com/KrDQeTj.png" alt="" class="rounded" width="85%">
+              <h5 class="text-secondary textOutros d-flex text-center mt-3 mb-3">Outros Voluntários</h5>
+              <div class="d-flex align-items-center flex-column text-center md-auto">
+                <div class="d-flex justify-content-around mb-2">
+                  <img src="https://imgur.com/KbMHTx7.png" alt="Admin" class="rounded-circle" height="15%" width="15%">
+                  <h6 class="textNome">Ary Ribeiro</h6>
+                  <button class="btn botaoEditar" type="submit" routerLink='/home'>Add</button>
+                </div>
+
+                <div class="d-flex justify-content-around mb-2">
+                  <img src="https://imgur.com/zuAE6Sj.jpg" alt="Admin" class="rounded-circle" height="15%" width="15%">
+                  <h6 class="textNome">Fernanda C.</h6>
+                  <button class="btn botaoEditar" type="submit" routerLink='/home'>Add</button>
+                </div>
+
+                <div class="d-flex justify-content-around mb-2">
+                  <img src="https://imgur.com/XyTYPY7.jpg" alt="Admin" class="rounded-circle" height="15%" width="15%">
+                  <h6 class="textNome">Lucas Otoni</h6>
+                  <button class="btn botaoEditar" type="submit" routerLink='/home'>Add</button>
+                </div>
+
+                <div class="d-flex justify-content-around mb-2">
+                  <img src="https://imgur.com/mDCCUfN.jpg" alt="Admin" class="rounded-circle" height="15%" width="15%">
+                  <h6 class="textNome">Renata M.</h6>
+                  <button class="btn botaoEditar" type="submit" routerLink='/home'>Add</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- TERCEIRA COLUNA  -->
+
+
+
+
+        <!-- FIM DAS COLUNAS / CONTAINER -->
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="TituloModalCentralizado">Nova Postagem</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="titulo">Título</label>
+            <input [(ngModel)]='postagem.titulo' type="text" class="form-control" id="titulo"
+              placeholder="Digite o Título">
+          </div>
+          <div class="form-group">
+            <label for="texto">Texto</label>
+            <textarea [(ngModel)]='postagem.texto' class="form-control" name="texto" id="texto" rows="3"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="titulo">Escolha um Tema ou <a routerLink="/tema" data-dismiss="modal">cadastre um novo
+              </a>:
+            </label>
+            <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
+              <option *ngFor='let tema of listaTemas' value="{{tema.id}}">
+                {{tema.descricao}}
+              </option>
+            </select>
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btnCancelar" data-dismiss="modal">Cancelar</button>
+          <button (click)='publicar()' data-dismiss="modal" type="button" class="btn btnPost">Publicar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Div Container Fluid  -->
+
+</div>

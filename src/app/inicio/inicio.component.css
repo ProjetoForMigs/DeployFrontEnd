@@ -1,0 +1,261 @@
+body{
+    margin-top:20px;
+    color: #1a202c;
+    text-align: left;
+    background-color: #e2e8f0;    
+}
+.main-body {
+    padding: 15px;
+}
+.card {
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 0 solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1rem;
+}
+
+.gutters-sm {
+    margin-right: -8px;
+    margin-left: -8px;
+}
+
+.gutters-sm>.col, .gutters-sm>[class*=col-] {
+    padding-right: 8px;
+    padding-left: 8px;
+}
+.mb-3, .my-3 {
+    margin-bottom: 1rem!important;
+}
+
+.bg-gray-300 {
+    background-color: #e2e8f0;
+}
+.h-100 {
+    height: 100%!important;
+}
+.shadow-none {
+    box-shadow: none!important;
+}
+.botaoEditar {
+    background-color: #f1c40f;
+    font-size: 0.8rem;
+    color: #ffffff;
+}
+.botaoEditar:hover {
+    background-color: #f39c12;
+}
+.botaoPost{
+    background-color: #8e44ad;
+    font-size: 0.8rem;
+    color: #ffffff;
+}
+.botaoPost:hover{
+    background-color: #9b59b6;
+}
+
+.bgPgPerfil {
+    background-color: #fafafa;
+}
+
+.botaoEdit {
+    background-color: #f1c40f;
+}
+.botaoEdit:hover {
+    background-color: #f39c12;
+}
+p {
+    font-size: 1rem;
+    color: #bdc3c7;
+}
+.btnModal {
+    background-color: #fafafa;
+    border: none;
+    font-size: 0.9rem;
+    color: #bdc3c7;
+    
+}
+
+.btnEntrar{
+    background-color: #f1c40f;
+    color : #ffffff;
+    font-weight: 500;
+    /* padding: 10px 20px; */
+    border-radius: 5%;
+    font-size: 0.8rem;
+}
+
+.btnEntrar:hover{
+  background-color: #f39c12;
+  
+}
+.ponto {
+    color: transparent;
+    font-size: 0.5rem;
+}
+.textoBio {
+    font-size: 0.8rem;
+}
+.btnPost {
+    background-color: #f1c40f;
+    font-size: 0.8rem;
+    color: #ffffff;
+    border-radius: 5%;
+}
+.btnPost:hover {
+    background-color: #f39c12;
+}
+.btnTema{
+    background-color: #8e44ad;
+    font-size: 0.8rem;
+    color: #ffffff;
+}
+.btnTema:hover{
+    background-color: #9b59b6;
+}
+.textContat {
+    font-size: 0.6rem;
+}
+
+.postagemNome {
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+.postagemTipo {
+    font-size: 0.8rem;
+}
+
+.postagemTexto {
+    font-size: 0.9rem;
+    color: black;
+}
+
+.btnCancelar{
+    background-color: #8e44ad;
+    color : #ffffff;
+    font-weight: 500;
+    /* padding: 10px 20px; */
+    border-radius: 5%;
+    font-size: 0.8rem;
+}
+
+.btnCancelar:hover{
+  background-color: #9b59b6;
+}
+.btnAll{
+    background-color: #8e44ad;
+    color : #ffffff;
+    font-weight: 500;
+    /* padding: 10px 20px; */
+    border-radius: 5%;
+    font-size: 0.8rem;
+}
+
+.btnAll:hover{
+  background-color: #9b59b6;
+}
+
+.btnSeguir {
+    background-color: #f1c40f;
+    font-size: 0.7rem;
+    color: #ffffff;
+}
+.btnSeguir:hover {
+    background-color: #f39c12;
+}
+.btnMsg{
+    background-color: #8e44ad;
+    font-size: 0.7rem;
+    color: #ffffff;
+}
+.btnMsg:hover{
+    background-color: #9b59b6;
+}
+
+.textName {
+font-size: 0.8rem;
+}
+
+.textTipe {
+font-size: 0.7rem;
+
+}
+.textNome {
+font-size: 1rem;
+
+}
+.textTipo {
+font-size: 0.8rem;
+
+}
+.bgImage {
+    background-color: black;
+    height: 50%;
+}
+.txtFriends {
+    font-size: 0.9rem;
+}
+.botaoMsg{
+    background-color: #8e44ad;
+    font-size: 0.7rem;
+    color: #ffffff;
+}
+
+.botaoMsg:hover{
+  background-color: #9b59b6;
+}
+
+.botaoAdd {
+    background-color: #f1c40f;
+    font-size: 0.7rem;
+    color: #ffffff;
+}
+.botaoAdd:hover {
+    background-color: #f39c12;
+}
+.txtT {
+    font-size: 0.6rem;
+}
+.textNome {
+    font-size: 0.8rem;
+}
+.textOutros {
+    font-size: 0.9rem;
+}
+.btnColor{
+    background-color: #f1c40f;
+    color : #ffffff;
+    font-weight: 500;
+    /* padding: 10px 20px; */
+    border-radius: 10%;
+  
+}
+.btnColor:hover{
+    background-color: #f39c12  
+} 
+.btnColor1{
+    background-color: #8e44ad;
+    color : #ffffff;
+    font-weight: 500;
+    /* padding: 10px 20px; */
+    border-radius: 10%;
+
+}
+.btnColor1:hover{
+    background-color: #6f1c92;
+}  

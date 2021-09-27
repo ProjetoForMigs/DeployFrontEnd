@@ -1,0 +1,81 @@
+<div class="container">
+    <div class="col-md-12 mt-3">
+        <div class="row d-flex justify-content-between md-auto">
+
+            <!-- Foto  -->
+            <div class="col-md-8">
+                <img src="https://imgur.com/QEIvBkb.png" class="rounded" width="100%" alt="login">
+            </div>
+            <!-- Fim da foto  -->
+
+            <!-- <div class="caixaCadastro"> -->
+            <div class="col-md-4 mt-3">
+
+                <div class="d-flex justify-content-center mb-3">
+                    <img src="https://i.imgur.com/KU6kC91.png" width="50%" alt="">
+                </div>
+
+                <div class="form-group corElemento">
+                    <label for="nome">Nome</label>
+                    <input [(ngModel)]="usuario.nome" class="form-control" type="text" name="nome" id="nome"
+                        placeholder="Digite seu nome">
+                </div>
+                <div class="form-group corElemento ">
+                    <label for="usuario">Usuário</label>
+                    <input [(ngModel)]="usuario.usuario" class="form-control" type="email" name="usuario" id="usuario"
+                        placeholder="Seu Usuário">
+                </div>
+                <div class="form-group corElemento">
+                    <label for="foto">Link da Foto</label>
+                    <input [(ngModel)]="usuario.foto" class="form-control" type="text" name="foto" id="foto"
+                        placeholder="Link da sua foto">
+                </div>
+
+                <div class="form-group corElemento">
+                    <label for="senha">Senha</label>
+                    <input (input)='confirmSenha($event)' class="form-control" type="password" name="senha" id="senha"
+                        placeholder="Sua Senha">
+                </div>
+                <div class="form-group corElemento">
+                    <label for="confirmSenha">Confirmar Senha</label>
+                    <input [(ngModel)]="usuario.senha" class="form-control" type="password" name="confirmSenha"
+                        id="confirmSenha" placeholder="Sua Senha">
+                </div>
+
+                <div class="form-group corElemento ">
+                    <label for="bio">Bio 
+                       
+                    </label>
+                    
+                    <input [(ngModel)]="usuario.bio" class="form-control" type="text" name="bio" id="bio"
+                        placeholder="Sua bio">
+                </div>
+                <div class="form-group corElemento ">
+                    <label for="link">LinkedIn</label>
+                    <input [(ngModel)]="usuario.link" class="form-control" type="text" name="link" id="link"
+                        placeholder="Seu LinkedIn">
+                </div>
+                
+                <div class="form-group corElemento">
+                    <label for="tipo">Tipo de Usuário</label>
+                    <select (change)='tipoUser($event)' class="form-control" name="tipo" id="tipo">
+                        <option value="">Selecione um tipo de Usuário</option>
+                        <option value="ONG">ONG</option>
+                        <option value="Empresa">Empresa</option>
+                        <option value="Voluntario">Voluntário</option>
+                    </select>
+                    <!-- </div> -->
+                    <div class="d-flex justify-content-center mt-4">
+                        <button type="submit" class="btn colorbtn2 mr-4 " routerLink='/entrar'>Cancelar</button>
+                        <button type="submit" class="btn colorbtn" (click)='cadastrar()'>Cadastrar</button>
+                    </div>
+                </div>
+                <hr>
+                <p class="text-center m-4 cadastro">Já possui login?<a class="linkverdecadastro cadastro2"
+                        routerLink="/entrar"> Entre aqui!</a> </p>
+                <!-- Fim  -->
+            </div>
+            <!-- Fim  -->
+        </div>
+    </div>
+</div>

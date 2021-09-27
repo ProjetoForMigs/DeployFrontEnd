@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+
+ /* Não apagar a partir daqui  */
+
+ .ods {
+     font-size: 1rem;
+
+ }
+ h3 {
+    /* font-family: 'open Sans' , sans-serif; */
+    font-size: 2rem;
+    font-weight: 500;
+    
+ }
+ .bgUsuarios {
+     background-color: #8e44ad;
+ }
+ .social-link {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #8e44ad;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:  #f1c40f;
+    border-radius: 50%;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+  }
+  
+  .social-link:hover,
+  .social-link:focus {
+    background: #ddd;
+    text-decoration: none;
+    color: purple;
+  }
+.p {
+  font-size: 2rem;
+}
+

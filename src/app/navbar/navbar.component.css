@@ -1,0 +1,27 @@
+.centralizar-links{
+    margin : 0 auto;
+}
+.cornavbar{
+    background-color: #8e44ad;
+}
+.botaonavbar{
+    background-color: #f1c40f ;
+    color : #ffffff;
+    font-weight: 500;
+    /* padding: 10px 20px; */
+    border-radius: 10%;
+}
+
+.botaonavbar:hover{
+  background-color: #f39c12                   
+
+;
+}
+.botaocadastrar{
+    background: transparent;
+    /* padding: 10px 20px; */
+    border-radius: 10%;
+    border-color: none;
+    color: #ffffff;
+    font-weight: 300;
+}

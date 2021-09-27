@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+.botaoAtualizar{
+    background-color: #f1c40f ;
+    color : #fff0e9;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+.botaoAtualizar:hover{
+    background-color: #f39c12;
+    border: none;
+}
+    
+.botaoCancelar{
+    background: transparent;
+    padding: 10px 20px;
+    border-radius:8px;
+    border-color: #8e44ad;
+    color: #8e44ad;
+    font-weight: 500;
+}
+.botaoCancelar:hover{
+    background-color: #8e44ad;
+    color:#fff0e9;
+    border: none;
+    
+}

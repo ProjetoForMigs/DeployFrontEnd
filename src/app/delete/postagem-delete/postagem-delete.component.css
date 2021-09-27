@@ -1,0 +1,23 @@
+
+.btnColor{
+    background-color: #f1c40f;
+    color : #ffffff;
+    font-weight: 500;
+    /* padding: 10px 20px; */
+    border-radius: 10%;
+  
+}
+.btnColor:hover{
+    background-color: #f39c12  
+} 
+.btnColor1{
+    background-color: #8e44ad;
+    color : #ffffff;
+    font-weight: 500;
+    /* padding: 10px 20px; */
+    border-radius: 10%;
+
+}
+.btnColor1:hover{
+    background-color: #6f1c92;
+}  
